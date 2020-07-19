@@ -1,23 +1,24 @@
-import express from 'express';
-import { json } from 'body-parser';
+import mongoose from 'mongoose';
+import {app} from './app';
 
-import { currentuserRouter } from './routes/currentuser';
-import { registerRouter } from './routes/register';
-import { loginRouter } from './routes/login';
-import { logoutRouter } from './routes/logout';
+const startApp = async () => {
+    try {
+        await mongoose.connect('mongodb://auth-mongo-srv:27017/auth', {
+            useNewUrlParser: true,
+            useCreateIndex: true,
+            useUnifiedTopology: true
+        });
+        console.log("Established MongoDB connection!")
+    }
+    catch (err) {
+        console.log(err);
+    }
 
-import { errorHandle } from './middleware/errorhandler';
+    app.listen(3000, () => {
+        console.log("Listening on 3000!!");
+    });
 
-const app = express();
-app.use(json());
+}
 
-app.use(currentuserRouter);
-app.use(registerRouter);
-app.use(loginRouter);
-app.use(logoutRouter);
+startApp();
 
-app.use(errorHandle);
-
-app.listen(3000, () => {
-    console.log("Listening on 3000!!");
-});

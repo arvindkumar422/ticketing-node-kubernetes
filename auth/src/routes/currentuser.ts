@@ -1,13 +1,11 @@
 import express from 'express';
 
+import { currentUserMw } from '../middleware/currentUserMiddleware';
+
 const router = express.Router();
 
-router.get('/api/users/currentuser', (req, res) => {
-    res.send('back to local docker');
+router.get('/api/users/currentuser', currentUserMw, (req, res) => {
+    res.send({ currentUser: req.currentUser || null });
 });
 
 export { router as currentuserRouter }
-
-// app.get('/api/users/currentuser', (req, res) => {
-//     res.send('finally');
-// });

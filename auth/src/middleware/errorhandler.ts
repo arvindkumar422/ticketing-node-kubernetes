@@ -1,6 +1,6 @@
 import express, { Request, Response, NextFunction } from 'express';
 
-import { AbstractError } from '../models/abstracterror';
+import { AbstractError } from '../models/errors/abstracterror';
 
 const errorHandle = (err: Error, req: Request, res: Response, next: NextFunction) => {
     if (err instanceof AbstractError) {
