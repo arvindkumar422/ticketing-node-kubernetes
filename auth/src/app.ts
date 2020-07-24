@@ -9,8 +9,7 @@ import { loginRouter } from './routes/login';
 import { logoutRouter } from './routes/logout';
 import cookieSession from 'cookie-session';
 
-import { errorHandle } from './middleware/errorhandler';
-
+import { errorHandle } from '@arvindtix/common';
 
 const app = express();
 app.set('trust proxy', true);

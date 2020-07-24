@@ -2,10 +2,9 @@ import express, { Request, Response, NextFunction } from 'express';
 import { body } from 'express-validator';
 
 import { User } from '../models/user';
-import { GenericError } from '../models/errors/genericerror';
+import { GenericError, validateReq } from '@arvindtix/common';
 
 import jwt from 'jsonwebtoken';
-import {validateReq} from '../middleware/validate-req';
 import { PasswordMgr } from '../middleware/password';
 
 const router = express.Router();

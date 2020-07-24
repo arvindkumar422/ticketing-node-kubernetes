@@ -1,6 +1,6 @@
 import express from 'express';
 
-import { currentUserMw } from '../middleware/currentUserMiddleware';
+import { currentUserMw } from '@arvindtix/common';
 
 const router = express.Router();
 
