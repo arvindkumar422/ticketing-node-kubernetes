@@ -35,7 +35,7 @@ const startApp = async () => {
     }
 
     app.listen(3000, () => {
-        console.log("Listening on 3000!!");
+        console.log("Orders service listening on 3000!!");
     });
 
 }

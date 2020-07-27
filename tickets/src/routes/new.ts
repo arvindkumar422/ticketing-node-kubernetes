@@ -3,6 +3,7 @@ import { requireAuth, validateReq } from '@arvindtix/common';
 import { body } from 'express-validator';
 import { Ticket } from '../models/ticket';
 import { TicketCreatedPublisher } from '../events/ticketcreate.publisher';
+import {natsUtil} from '../models/nats-singleton';
 
 const router = express.Router();
 
@@ -24,14 +25,14 @@ router.post('/api/tickets',
 
     await tick.save();
 
-    // new TicketCreatedPublisher(client).publish(
-    //   {
-    //     id: tick.id,
-    //     title: tick.title,
-    //     price: tick.price,
-    //     userId: tick.userId
-    //   }
-    // );
+    new TicketCreatedPublisher(natsUtil.client).publish(
+      {
+        id: tick.id,
+        title: tick.title,
+        price: tick.price,
+        userId: tick.userId
+      }
+    );
 
     res.status(200).send(tick);
   });
