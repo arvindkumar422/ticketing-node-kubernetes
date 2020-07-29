@@ -20,6 +20,10 @@ router.put('/api/tickets/:id',
             return new GenericError('Ticket not found');
         }
 
+        if(tick.orderId) {
+            return new GenericError('Ticket is reserved, cannot modify at this time.');
+        }
+
         if (tick.userId !== req.currentUser!.id) {
             throw new NotAuthorizedError();
         }
@@ -36,7 +40,8 @@ router.put('/api/tickets/:id',
                 id: tick.id,
                 title: tick.title,
                 price: tick.price,
-                userId: tick.userId
+                userId: tick.userId,
+                version: tick.version
             }
         );
 

@@ -30,7 +30,8 @@ router.post('/api/tickets',
         id: tick.id,
         title: tick.title,
         price: tick.price,
-        userId: tick.userId
+        userId: tick.userId,
+        version: tick.version
       }
     );
 

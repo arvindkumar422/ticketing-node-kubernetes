@@ -1,9 +1,6 @@
 import mongoose from 'mongoose';
 import { app } from './app';
 import { natsUtil } from './models/nats-singleton';
-import { TicketCreatedListener } from './events/listeners/TicketCreatedListener';
-import { TicketUpdatedListener } from './events/listeners/TicketUpdatedListener';
-import { ExpirationCompleteListener } from './events/listeners/ExpirationCompleteListener';
 
 const startApp = async () => {
     if (!process.env.MONGO_URI) {
@@ -27,10 +24,6 @@ const startApp = async () => {
         process.on('SIGINT', () => natsUtil.client.close());
         process.on('SIGTERM', () => natsUtil.client.close());
 
-        new TicketCreatedListener(natsUtil.client).listen();
-        new TicketUpdatedListener(natsUtil.client).listen();
-        new ExpirationCompleteListener(natsUtil.client).listen();
-
         await mongoose.connect(process.env.MONGO_URI, {
             useNewUrlParser: true,
             useCreateIndex: true,
@@ -43,7 +36,7 @@ const startApp = async () => {
     }
 
     app.listen(3000, () => {
-        console.log("Orders service listening on 3000!!");
+        console.log("Listening on 3000!!");
     });
 
 }
