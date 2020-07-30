@@ -4,6 +4,7 @@ import { natsUtil } from './models/nats-singleton';
 import { TicketCreatedListener } from './events/listeners/TicketCreatedListener';
 import { TicketUpdatedListener } from './events/listeners/TicketUpdatedListener';
 import { ExpirationCompleteListener } from './events/listeners/ExpirationCompleteListener';
+import { PaymentCreatedListener } from './events/listeners/PaymentCreatedListener';
 
 const startApp = async () => {
     if (!process.env.MONGO_URI) {
@@ -30,6 +31,7 @@ const startApp = async () => {
         new TicketCreatedListener(natsUtil.client).listen();
         new TicketUpdatedListener(natsUtil.client).listen();
         new ExpirationCompleteListener(natsUtil.client).listen();
+        new PaymentCreatedListener(natsUtil.client).listen();
 
         await mongoose.connect(process.env.MONGO_URI, {
             useNewUrlParser: true,

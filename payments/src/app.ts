@@ -5,6 +5,7 @@ import cookieSession from 'cookie-session';
 import 'express-async-errors';
 
 import { errorHandle, currentUserMw } from '@arvindtix/common';
+import { createChargeRouter } from './routes/new';
 
 const app = express();
 app.set('trust proxy', true);
@@ -18,6 +19,7 @@ app.use(cookieSession({
 
 app.use(currentUserMw);
 
+app.use(createChargeRouter);
 
 app.use(errorHandle);
 
