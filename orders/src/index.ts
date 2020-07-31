@@ -22,7 +22,7 @@ const startApp = async () => {
     try {
         await natsUtil.connect(process.env.NATS_CLUSTER_ID, process.env.NATS_CLIENT_ID, process.env.NATS_URL);
         natsUtil.client.on('close', () => {
-            console.log('NATS connection terminated');
+            console.log('NATS connection terminated!');
             process.exit();
         });
         process.on('SIGINT', () => natsUtil.client.close());

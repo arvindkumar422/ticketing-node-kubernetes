@@ -15,7 +15,7 @@ const startApp = async () => {
         throw new Error('NATS_CLUSTER_ID not defined!');
     }
     if (!process.env.NATS_URL) {
-        throw new Error('NATS_URL not defined!');
+        throw new Error('NATS_URL not defined!!');
     }
     try {
         await natsUtil.connect(process.env.NATS_CLUSTER_ID, process.env.NATS_CLIENT_ID, process.env.NATS_URL);
