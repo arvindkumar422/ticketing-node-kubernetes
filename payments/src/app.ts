@@ -13,7 +13,8 @@ app.set('trust proxy', true);
 app.use(json());
 
 app.use(cookieSession({
-    secure: process.env.NODE_ENV !== 'test', //set to false when on a test env to make testing easier; true otherwise to enforce https
+    //secure: process.env.NODE_ENV !== 'test', //set to false when on a test env to make testing easier; true otherwise to enforce https
+    secure: false,
     signed: false
 }));
 
