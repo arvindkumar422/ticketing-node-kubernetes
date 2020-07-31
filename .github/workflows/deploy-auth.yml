@@ -20,14 +20,11 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
-
-    # Runs a single command using the runners shell
-    - name: Run a deploy script for auth service
-    - run: cd auth && docker build -t arvindkumar422/auth .
-    - run: docker login -u $DOCKER_USERNAME
-      env:
-        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-    - run: docker push arvindkumar422/auth
+      - uses: actions/checkout@v2
+      - name: Run a deploy script for auth service
+      - run: cd auth && docker build -t arvindkumar422/auth .
+      - run: docker login -u $DOCKER_USERNAME
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+      - run: docker push arvindkumar422/auth
