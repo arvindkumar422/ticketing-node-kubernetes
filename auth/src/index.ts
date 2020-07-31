@@ -3,7 +3,7 @@ import {app} from './app';
 
 const startApp = async () => {
     if(!process.env.MONGO_URI) {
-        throw new Error('Mongo url undefined!');
+        throw new Error('Mongo URL undefined!');
     }
     try {
         await mongoose.connect(process.env.MONGO_URI, {
