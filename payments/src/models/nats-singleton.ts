@@ -6,7 +6,7 @@ class NatsUtil {
     private _client?: Stan;
 
     get client() {
-        if (!this._client) { throw new Error('Cannot access NATS') }
+        if (!this._client) { throw new Error('Cannot access NATS!') }
         return this._client;
     }
 
