@@ -5,7 +5,7 @@ import {app} from '../app';
 let mongo : any;
 
 beforeAll(async () => {
-    console.log('test begin auth..');
+    console.log('test begin auth..2nd interation');
     process.env.JWT_KEY = 'arbitrary';
 
     mongo = new MongoMemoryServer();
