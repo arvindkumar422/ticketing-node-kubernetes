@@ -9,7 +9,7 @@ router.get('/api/orders/:orderid', async (req: Request, res: Response) => {
     if(!order) {
         throw new GenericError('Order not found..!');
     }
-    if(order.id !== req.currentUser!.id) {
+    if(order.userId !== req.currentUser!.id) {
         throw new NotAuthorizedError();
     }
     res.send(order);

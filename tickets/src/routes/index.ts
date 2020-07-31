@@ -5,7 +5,9 @@ const router = express.Router();
 
 router.get('/api/tickets',
     async (req: Request, res: Response) => {
-        const tick = await Ticket.find({});
+        const tick = await Ticket.find({
+            orderId: undefined
+        });
         res.send(tick);
     });
 
