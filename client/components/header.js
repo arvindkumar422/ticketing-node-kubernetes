@@ -13,7 +13,7 @@ export default ({ currentUser }) => {
       return (
         <li key={href} className="nav-item">
           <Link href={href}>
-            <a className="nav-link">{label}</a>
+            <a className="nav-link" style="margin-right: 6px;background: aliceblue;">{label}</a>
           </Link>
         </li>
       );
@@ -21,13 +21,16 @@ export default ({ currentUser }) => {
 
   return (
     <nav className="navbar navbar-dark bg-primary">
-      <Link href="/">
-        <a className="navbar-brand">MicroTix</a>
-      </Link>
+      <div className="container">
+        <Link href="/">
+          <a className="navbar-brand">MicroTix</a>
+        </Link>
 
-      <div className="d-flex justify-content-end">
-        <ul className="nav d-flex align-items-center">{links}</ul>
+        <div className="d-flex justify-content-end">
+          <ul className="nav d-flex align-items-center">{links}</ul>
+        </div>
       </div>
+
     </nav>
   );
 };
