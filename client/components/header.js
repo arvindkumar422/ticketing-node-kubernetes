@@ -20,9 +20,9 @@ export default ({ currentUser }) => {
     });
 
   return (
-    <nav className="navbar navbar-light bg-light">
+    <nav className="navbar navbar-dark bg-primary">
       <Link href="/">
-        <a className="navbar-brand">GitTix</a>
+        <a className="navbar-brand">MicroTix</a>
       </Link>
 
       <div className="d-flex justify-content-end">
