@@ -25,7 +25,7 @@ router.post(
 
     const order = await Order.findById(orderId);
 
-    if(!order) { throw new GenericError('Order not found!'); }
+    if(!order) { throw new GenericError('Order cannot be found!'); }
 
     if(order.userId !== req.currentUser!.id) {
       throw new NotAuthorizedError();
