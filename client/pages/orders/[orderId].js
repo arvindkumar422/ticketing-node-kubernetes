@@ -29,7 +29,8 @@ const OrderShow = ({ order, currentUser }) => {
   }, [order]);
 
   if (timeLeft < 0) {
-    return <div>Order Expired</div>;
+    setTimeout(() => Router.push('/'), 3000);
+    return <div className="order-expired">Your order has expired</div>;
   }
 
   return (
