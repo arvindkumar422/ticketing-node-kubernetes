@@ -1,4 +1,18 @@
 import Link from "next/link";
+import Particles from 'react-particles-js';
+
+const particlesJson = {
+  particles: {
+      number: {
+          value: 70,
+          density: {
+              enable: true,
+              value_area: 800
+          }
+      }
+
+  }
+};
 
 const LandingPage = ({ currentUser, tickets }) => {
   const ticketList = tickets.map((ticket) => {
@@ -19,6 +33,7 @@ const LandingPage = ({ currentUser, tickets }) => {
 
   return (
     <div>
+      <Particles className='particles' params={particlesJson} />
       <h1>Tickets</h1>
       <table className="table">
         <thead>
