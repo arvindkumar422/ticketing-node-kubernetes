@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Particles from 'react-particles-js';
-import './clientstyle.css';
 
 const particlesJson = {
   particles: {
