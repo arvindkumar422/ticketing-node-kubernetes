@@ -29,3 +29,11 @@
     margin-top: 10%;
     max-width: 40%;
 }
+
+.expiry {
+    margin-top: 4%;
+    background: antiquewhite;
+    padding: 3%;
+    border-radius: 30px;
+    max-width: 50%;
+}

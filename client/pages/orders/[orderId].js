@@ -12,7 +12,7 @@ const OrderShow = ({ order, currentUser }) => {
       orderId: order.id,
     },
     onSuccess: () => Router.push('/orders'),
-  }); 
+  });
 
   useEffect(() => {
     const findTimeLeft = () => {
@@ -33,15 +33,19 @@ const OrderShow = ({ order, currentUser }) => {
   }
 
   return (
-    <div>
-      Time left to pay: {timeLeft} seconds!!
-      <StripeCheckout
-        token={({ id }) => doRequest({ token: id })}
-        stripeKey="pk_test_51HANWyJUQaDpNgeV0LXOfgvBTcDfKI1Rg9gQy238uEx0LDDKFcfKRvmY2dWpeVpEPIcrtfBH5Vtsrm6oENIBdq8v00YUFesBHJ"
-        amount={order.ticket.price * 100}
-        email={currentUser.email}
-      />
-      {errors}
+    <div class="container">
+      <div className="expiry">
+        <h4>
+          Time left to pay: {timeLeft} seconds!!
+    </h4>
+        <StripeCheckout
+          token={({ id }) => doRequest({ token: id })}
+          stripeKey="pk_test_51HANWyJUQaDpNgeV0LXOfgvBTcDfKI1Rg9gQy238uEx0LDDKFcfKRvmY2dWpeVpEPIcrtfBH5Vtsrm6oENIBdq8v00YUFesBHJ"
+          amount={order.ticket.price * 100}
+          email={currentUser.email}
+        />
+        {errors}
+      </div>
     </div>
   );
 };
