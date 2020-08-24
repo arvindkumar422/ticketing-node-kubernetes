@@ -13,14 +13,21 @@ const TicketShow = ({ ticket }) => {
   });
 
   return (
-    <div>
-      <h1>{ticket.title}</h1>
-      <h4>Price: {ticket.price}</h4>
-      {errors}
-      <button onClick={() => doRequest()} className="btn btn-primary">
-        Purchase
-      </button>
+    <div class="card bg-warning">
+      <div class="card-body">
+        <h1 class="card-title">{ticket.title}</h1><h4 class="card-text" >${ticket.price}</h4>
+        <button class="btn btn-primary">Purchase</button>
+      </div>
+
     </div>
+    // <div>
+    //   <h1>{ticket.title}</h1>
+    //   <h4>${ticket.price}</h4>
+    //   {errors}
+    //   <button onClick={() => doRequest()} className="btn btn-primary">
+    //     Purchase
+    //   </button>
+    // </div>
   );
 };
 
