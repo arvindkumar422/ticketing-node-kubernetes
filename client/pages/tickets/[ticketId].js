@@ -17,6 +17,7 @@ const TicketShow = ({ currentUser, ticket }) => {
       <div class="card-body">
         <h1 class="card-title">{ticket.title}</h1><h4 class="card-text" >${ticket.price}</h4>
         {errors}
+        {console.log(currentUser)}
         <button disabled={currentUser === undefined} onClick={() => doRequest()} class="btn btn-primary">Purchase</button>
       </div>
 
