@@ -1,3 +1,7 @@
+.container {
+    text-align: -webkit-center;
+}
+
 .particles {
     position: fixed;
     left: 0;
@@ -14,4 +18,14 @@
 
 .table {
     margin-top: 3%;
+}
+
+.card-text {
+    color: green;
+}
+
+
+.card {
+    margin-top: 10%;
+    max-width: 40%;
 }
