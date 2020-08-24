@@ -11,7 +11,7 @@ export class OrderCreatedListener extends Listener<OrderCreatedEvent> {
         const ord = Order.build({
             id,userId,price: data.ticket.price,version,status
         });
-        await ord.save();
+        await ord.save(); 
         msg.ack();
     }
 }
