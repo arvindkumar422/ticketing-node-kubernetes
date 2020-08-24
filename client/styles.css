@@ -38,6 +38,14 @@
     max-width: 50%;
 }
 
+.order-expired {
+    margin-top: 10%;
+    padding: 20px;
+    max-width: 45%;
+    background: #eef094;
+    border-radius: 15px;
+}
+
 .democards {
     margin-top: 2%;
 }
