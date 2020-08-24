@@ -46,6 +46,46 @@ const OrderShow = ({ order, currentUser }) => {
         />
         {errors}
       </div>
+      <div>
+        <h4>Try out payments with any of the below demo cards</h4>
+        <table class="table table-secondary">
+          <thead>
+            <tr>
+              <th>Number</th>
+              <th>Brand</th>
+              <th>CVC</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>4242 4242 4242 4242</td>
+              <td>Visa</td>
+              <td>Any 3 digits</td>
+              <td>Any future date</td>
+            </tr>
+            <tr>
+              <td>5555 5555 5555 4444</td>
+              <td>Mastercard</td>
+              <td>Any 3 digits</td>
+              <td>Any future date</td>
+            </tr>
+            <tr>
+              <td>6200 0000 0000 0005</td>
+              <td>UnionPay</td>
+              <td>Any 3 digits</td>
+              <td>Any future date</td>
+            </tr>
+            <tr>
+              <td>3782 822463 10005</td>
+              <td>American Express</td>
+              <td>Any 4 digits</td>
+              <td>Any future date</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
     </div>
   );
 };
