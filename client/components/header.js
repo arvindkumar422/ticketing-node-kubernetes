@@ -20,7 +20,7 @@ export default ({ currentUser }) => {
     });
 
   return (
-    <nav className="navbar navbar-dark bg-primary">
+    <nav className="navbar navbar-dark bg-dark">
       <div className="container">
         <Link href="/">
           <a className="navbar-brand">MicroTix</a>

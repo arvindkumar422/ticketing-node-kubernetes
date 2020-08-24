@@ -16,7 +16,8 @@ const TicketShow = ({ ticket }) => {
     <div class="card bg-warning">
       <div class="card-body">
         <h1 class="card-title">{ticket.title}</h1><h4 class="card-text" >${ticket.price}</h4>
-        <button class="btn btn-primary">Purchase</button>
+        {errors}
+        <button onClick={() => doRequest()} class="btn btn-primary">Purchase</button>
       </div>
 
     </div>
