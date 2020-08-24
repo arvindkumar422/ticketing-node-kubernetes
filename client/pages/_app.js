@@ -1,11 +1,27 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import buildClient from '../api/build-client';
 import Header from '../components/header';
-import '../styles.css'
+import '../styles.css';
+import Particles from 'react-particles-js';
+
+const particlesJson = {
+  particles: {
+    number: {
+      value: 70,
+      density: {
+        enable: true,
+        value_area: 800
+      }
+    }
+
+  }
+};
+
 
 const AppComponent = ({ Component, pageProps, currentUser }) => {
   return (
     <div>
+      <Particles className='particles' params={particlesJson} />
       <Header currentUser={currentUser} />
       <div className='container'>
         <Component currentUser={currentUser} {...pageProps} />
