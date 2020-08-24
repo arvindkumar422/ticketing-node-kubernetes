@@ -1,15 +1,16 @@
 import Link from "next/link";
 import Particles from 'react-particles-js';
+import '../style.css';
 
 const particlesJson = {
   particles: {
-      number: {
-          value: 70,
-          density: {
-              enable: true,
-              value_area: 800
-          }
+    number: {
+      value: 70,
+      density: {
+        enable: true,
+        value_area: 800
       }
+    }
 
   }
 };
@@ -32,10 +33,10 @@ const LandingPage = ({ currentUser, tickets }) => {
   });
 
   return (
-    <div>
+    <div className="homediv">
       <Particles className='particles' params={particlesJson} />
       <h1>Tickets</h1>
-      <table className="table">
+      <table className="table table-success">
         <thead>
           <tr>
             <th>Title</th>
