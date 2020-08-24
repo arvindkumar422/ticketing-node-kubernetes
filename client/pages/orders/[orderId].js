@@ -35,9 +35,9 @@ const OrderShow = ({ order, currentUser }) => {
   return (
     <div class="container">
       <div className="expiry">
-        <h4>
+        <h4 className="time-left-text">
           Time left to pay: {timeLeft} seconds!!
-    </h4>
+        </h4>
         <StripeCheckout
           token={({ id }) => doRequest({ token: id })}
           stripeKey="pk_test_51HANWyJUQaDpNgeV0LXOfgvBTcDfKI1Rg9gQy238uEx0LDDKFcfKRvmY2dWpeVpEPIcrtfBH5Vtsrm6oENIBdq8v00YUFesBHJ"
@@ -46,8 +46,8 @@ const OrderShow = ({ order, currentUser }) => {
         />
         {errors}
       </div>
-      <div>
-        <h4>Try out payments with any of the below demo cards</h4>
+      <div className="democards">
+        <h3>Try out payments with any of the below demo cards</h3>
         <table class="table table-secondary">
           <thead>
             <tr>

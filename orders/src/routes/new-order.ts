@@ -6,7 +6,7 @@ import { OrderCreatedPublisher } from '../events/ordercreate.publisher';
 import { natsUtil } from '../models/nats-singleton';
 
 const router = express.Router();
-const EXPIRE_SECONDS = 15 * 60;
+const EXPIRE_SECONDS = 90; //90 seconds
 
 router.post('/api/orders', async (req: Request, res: Response) => {
     const { ticketId } = req.body;
