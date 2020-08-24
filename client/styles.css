@@ -16,7 +16,7 @@
     margin-top: 4%;
 }
 
-.table {
+.table-home {
     margin-top: 3%;
 }
 
@@ -36,4 +36,12 @@
     padding: 3%;
     border-radius: 30px;
     max-width: 50%;
+}
+
+.democards {
+    margin-top: 2%;
+}
+
+.time-left-text {
+    margin-bottom: 4%;
 }
