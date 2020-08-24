@@ -30,9 +30,6 @@ spec:
             backend:
               serviceName: client-srv
               servicePort: 3000
-<<<<<<< HEAD
-              
-=======
 
 ---
 apiVersion: v1
@@ -66,4 +63,3 @@ spec:
     app.kubernetes.io/name: ingress-nginx
     app.kubernetes.io/instance: ingress-nginx
     app.kubernetes.io/component: controller
->>>>>>> 15295959ac941b76541406733a9c985a501c93ea
