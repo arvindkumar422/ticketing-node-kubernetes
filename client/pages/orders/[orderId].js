@@ -12,7 +12,7 @@ const OrderShow = ({ order, currentUser }) => {
       orderId: order.id,
     },
     onSuccess: () => Router.push('/orders'),
-  }); 
+  });
 
   useEffect(() => {
     const findTimeLeft = () => {
@@ -33,15 +33,59 @@ const OrderShow = ({ order, currentUser }) => {
   }
 
   return (
-    <div>
-      Time left to pay: {timeLeft} seconds!!
-      <StripeCheckout
-        token={({ id }) => doRequest({ token: id })}
-        stripeKey="pk_test_51HANWyJUQaDpNgeV0LXOfgvBTcDfKI1Rg9gQy238uEx0LDDKFcfKRvmY2dWpeVpEPIcrtfBH5Vtsrm6oENIBdq8v00YUFesBHJ"
-        amount={order.ticket.price * 100}
-        email={currentUser.email}
-      />
-      {errors}
+    <div class="container">
+      <div className="expiry">
+        <h4>
+          Time left to pay: {timeLeft} seconds!!
+    </h4>
+        <StripeCheckout
+          token={({ id }) => doRequest({ token: id })}
+          stripeKey="pk_test_51HANWyJUQaDpNgeV0LXOfgvBTcDfKI1Rg9gQy238uEx0LDDKFcfKRvmY2dWpeVpEPIcrtfBH5Vtsrm6oENIBdq8v00YUFesBHJ"
+          amount={order.ticket.price * 100}
+          email={currentUser.email}
+        />
+        {errors}
+      </div>
+      <div>
+        <h4>Try out payments with any of the below demo cards</h4>
+        <table class="table table-secondary">
+          <thead>
+            <tr>
+              <th>Number</th>
+              <th>Brand</th>
+              <th>CVC</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>4242 4242 4242 4242</td>
+              <td>Visa</td>
+              <td>Any 3 digits</td>
+              <td>Any future date</td>
+            </tr>
+            <tr>
+              <td>5555 5555 5555 4444</td>
+              <td>Mastercard</td>
+              <td>Any 3 digits</td>
+              <td>Any future date</td>
+            </tr>
+            <tr>
+              <td>6200 0000 0000 0005</td>
+              <td>UnionPay</td>
+              <td>Any 3 digits</td>
+              <td>Any future date</td>
+            </tr>
+            <tr>
+              <td>3782 822463 10005</td>
+              <td>American Express</td>
+              <td>Any 4 digits</td>
+              <td>Any future date</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
     </div>
   );
 };
