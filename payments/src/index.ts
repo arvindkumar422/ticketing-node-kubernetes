@@ -6,7 +6,7 @@ import { OrderCancelledListener } from './events/listeners/OrderCancelledListene
 
 const startApp = async () => {
     if (!process.env.MONGO_URI) {
-        throw new Error('Mongo url not defined!');
+        throw new Error('Mongo url is not defined!');
     }
     if (!process.env.NATS_CLIENT_ID) {
         throw new Error('NATS_CLIENT_ID not defined!');

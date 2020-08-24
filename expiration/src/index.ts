@@ -3,7 +3,7 @@ import { OrderCreatedListener } from './events/listeners/OrderCreatedListener';
 
 const startApp = async () => {
     if (!process.env.NATS_CLIENT_ID) {
-        throw new Error('NATS_CLIENT_ID not defined!');
+        throw new Error('NATS_CLIENT_ID is not defined!');
     }
     if (!process.env.NATS_CLUSTER_ID) {
         throw new Error('NATS_CLUSTER_ID not defined!');
