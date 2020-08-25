@@ -15,9 +15,12 @@ const TicketShow = ({ currentUser, ticket }) => {
   return (
     <div class="card ticket-card">
       <div class="card-body">
-        <h1 class="card-title">{ticket.title}</h1><h4 class="card-text" >${ticket.price}</h4>
+        <h2 class="card-title">{ticket.title}</h2><h4 class="card-text" >${ticket.price}</h4>
+        <hr/>
         {errors}
-        {currentUser === null ? <div><button disabled>Purchase</button><p>You must be logged in to purchase</p></div> : <button onClick={() => doRequest()} class="btn btn-primary">Purchase</button>}
+        {currentUser === null 
+        ? <div><button class="btn btn-primary" disabled>Purchase</button><p>You must be logged in to purchase</p></div> 
+        : <button onClick={() => doRequest()} class="btn btn-primary">Purchase</button>}
         {/* <button disabled={currentUser === null} onClick={() => doRequest()} class="btn btn-primary">Purchase</button> */}
       </div>
 

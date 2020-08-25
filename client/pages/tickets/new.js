@@ -32,10 +32,11 @@ const NewTicket = () => {
 
   return (
     <div>
-      <h1>Create a Ticket</h1>
-      <form onSubmit={onSubmit}>
+      <h3>Create a Ticket</h3>
+      <hr/>
+      <form className="authform" onSubmit={onSubmit}>
         <div className="form-group">
-          <label>Title</label>
+          <label>Event</label>
           <input
             value={title}
             onChange={(e) => setTitle(e.target.value)}
@@ -43,7 +44,7 @@ const NewTicket = () => {
           />
         </div>
         <div className="form-group">
-          <label>Price</label>
+          <label>Price (in $)</label>
           <input
             value={price}
             onBlur={onBlur}
@@ -52,7 +53,8 @@ const NewTicket = () => {
           />
         </div>
         {errors}
-        <button className="btn btn-primary">Submit</button>
+        <hr/>
+        <button className="btn btn-primary">Create ticket!</button>
       </form>
     </div>
   );

@@ -20,6 +20,20 @@
     margin-top: 3%;
 }
 
+.order-table {
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 4%;
+    max-width: 50%;
+}
+
+.authform {
+    margin-top: 3%;
+    max-width: 50%;
+    background: #b2cfe361;
+    padding: 3%;
+}
+
 .card-text {
     color: green;
 }
