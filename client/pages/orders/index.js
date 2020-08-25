@@ -1,14 +1,34 @@
 const OrderIndex = ({ orders }) => {
   return (
-    <ul>
-      {orders.map((order) => {
-        return (
-          <li key={order.id}>
-            {order.ticket.title} - {order.status}
-          </li>
-        );
-      })}
-    </ul>
+    <div>
+      <h3>
+        Past orders
+      </h3>
+      <hr />
+      <table class="order-table table table-secondary">
+        <thead>
+          <tr>
+            <th>
+              Ticket name
+            </th>
+            <th>
+              Status
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {orders.map((order) => {
+            return (
+              <tr key={order.id}>
+                <td>{order.ticket.title}</td>
+                <td>{order.status}</td>
+              </tr>
+            );
+          })}
+
+        </tbody>
+      </table>
+    </div>
   );
 };
 

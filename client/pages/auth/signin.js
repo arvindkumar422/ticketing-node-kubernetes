@@ -22,8 +22,9 @@ export default () => {
   };
 
   return (
-    <form onSubmit={onSubmit}>
-      <h1>Sign In</h1>
+    <form className="authform" onSubmit={onSubmit}>
+      <h3>Sign In</h3>
+      <hr/>
       <div className="form-group">
         <label>Email Address</label>
         <input
@@ -42,7 +43,7 @@ export default () => {
         />
       </div>
       {errors}
-      <button className="btn btn-primary">Sign In</button>
+      <button className="btn btn-success">Login</button>
     </form>
   );
 };
