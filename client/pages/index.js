@@ -1,15 +1,15 @@
 import Link from "next/link";
-// import KubeConfig from "@kubernetes/client-node";
-// import CoreV1Api from "@kubernetes/client-node";
+import KubeConfig from "@kubernetes/client-node";
+import CoreV1Api from "@kubernetes/client-node";
 
-const k8s = require('@kubernetes-client/client-node');
 
 const LandingPage = ({ currentUser, tickets }) => {
 
-  const podsList = new k8s.KubeConfig();
+  const podsList = new KubeConfig();
+  console.lod(podsList);
   podsList.loadFromDefault();
 
-  const k8sApi = podsList.makeApiClient(CoreV1Api);
+  //const k8sApi = podsList.makeApiClient(CoreV1Api);
 
 
 
@@ -32,9 +32,9 @@ const LandingPage = ({ currentUser, tickets }) => {
   return (
     <div className="homediv">
       <h1>Tickets</h1>
-      {k8sApi.listNamespacedPod('default').then((res) => {
+      {/* {k8sApi.listNamespacedPod('default').then((res) => {
         console.log(res.body);
-      })}
+      })} */}
       <table className="table table-home table-success">
         <thead>
           <tr>
