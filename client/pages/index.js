@@ -2,7 +2,7 @@ import Link from "next/link";
 // import KubeConfig from "@kubernetes/client-node";
 // import CoreV1Api from "@kubernetes/client-node";
 
-const k8s = require('kubernetes-client/client-node');
+const k8s = require('@kubernetes-client/client-node');
 
 const LandingPage = ({ currentUser, tickets }) => {
 
