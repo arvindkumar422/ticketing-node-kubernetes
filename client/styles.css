@@ -12,9 +12,9 @@
     background: #7eabb0;
 }
 
-.homediv {
+/* .homediv {
     margin-top: 4%;
-}
+} */
 
 .table-home {
     margin-top: 3%;
@@ -69,4 +69,12 @@
 
 .time-left-text {
     margin-bottom: 4%;
+}
+
+.userloggedin {
+    color: #1f24c0;
+}
+
+.userloggedindiv {
+    text-align: center;
 }
