@@ -1,10 +1,13 @@
 import Link from "next/link";
-import KubeConfig from "@kubernetes/client-node";
-import CoreV1Api from "@kubernetes/client-node";
+// import KubeConfig from "@kubernetes/client-node";
+// import CoreV1Api from "@kubernetes/client-node";
+
+const k8s = require('kubernetes-client/client-node');
 
 const LandingPage = ({ currentUser, tickets }) => {
 
-  const podsList = new KubeConfig().loadFromDefault();
+  const podsList = new k8s.KubeConfig();
+  podsList.loadFromDefault();
 
   const k8sApi = podsList.makeApiClient(CoreV1Api);
 
