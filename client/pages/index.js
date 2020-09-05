@@ -1,6 +1,15 @@
 import Link from "next/link";
+import KubeConfig from "@kubernetes/client-node";
+import CoreV1Api from "@kubernetes/client-node";
 
 const LandingPage = ({ currentUser, tickets }) => {
+
+  const podsList = new KubeConfig().loadFromDefault();
+
+  const k8sApi = podsList.makeApiClient(CoreV1Api);
+
+
+
   const ticketList = tickets.map((ticket) => {
     return (
       <Link href="tickets/[ticketId]" as={`/tickets/${ticket.id}`}>
@@ -20,6 +29,9 @@ const LandingPage = ({ currentUser, tickets }) => {
   return (
     <div className="homediv">
       <h1>Tickets</h1>
+      {k8sApi.listNamespacedPod('default').then((res) => {
+        console.log(res.body);
+      })}
       <table className="table table-home table-success">
         <thead>
           <tr>
