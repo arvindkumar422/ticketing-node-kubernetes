@@ -1,0 +1,84 @@
+{
+    "depls": [
+        {
+            "name": "tickets-mongo-depl",
+            "namespace": "default",
+            "labels": "-",
+            "pods": "1 / 1",
+            "created": "2020-08-02T09:28:56.321-10:00",
+            "images": "mongo"
+        },
+        {
+            "name": "tickets-depl",
+            "namespace": "default",
+            "labels": "-",
+            "pods": "1 / 1",
+            "created": "2020-08-02T09:28:56.321-10:00",
+            "images": "arvindkumar422/tickets"
+        },
+        {
+            "name": "orders-mongo-depl",
+            "namespace": "default",
+            "labels": "-",
+            "pods": "1 / 1",
+            "created": "2020-08-02T09:28:56.321-10:00",
+            "images": "mongo"
+        },
+        {
+            "name": "payments-depl",
+            "namespace": "default",
+            "labels": "-",
+            "pods": "1 / 1",
+            "created": "2020-08-02T09:28:56.321-10:00",
+            "images": "arvindkumar422/payments"
+        },
+        {
+            "name": "payments-mongo-depl",
+            "namespace": "default",
+            "labels": "-",
+            "pods": "1 / 1",
+            "created": "2020-08-02T09:28:56.321-10:00",
+            "images": "mongo"
+        },
+        {
+            "name": "orders-depl",
+            "namespace": "default",
+            "labels": "-",
+            "pods": "1 / 1",
+            "created": "2020-08-02T09:28:56.321-10:00",
+            "images": "arvindkumar422/orders"
+        },
+        {
+            "name": "nats-depl",
+            "namespace": "default",
+            "labels": "-",
+            "pods": "1 / 1",
+            "created": "2020-08-02T09:28:56.321-10:00",
+            "images": "nats-streaming:0.17.0"
+        },
+        {
+            "name": "auth-mongo-depl",
+            "namespace": "default",
+            "labels": "-",
+            "pods": "1 / 1",
+            "created": "2020-08-02T09:28:56.321-10:00",
+            "images": "mongo"
+        },
+        {
+            "name": "client-depl",
+            "namespace": "default",
+            "labels": "-",
+            "pods": "1 / 1",
+            "created": "2020-08-02T09:28:56.321-10:00",
+            "images": "arvindkumar422/client"
+        },
+        {
+            "name": "expiration-depl",
+            "namespace": "default",
+            "labels": "-",
+            "pods": "1 / 1",
+            "created": "2020-08-02T09:28:56.321-10:00",
+            "images": "arvindkumar422/expiration"
+        }
+    ]
+}
