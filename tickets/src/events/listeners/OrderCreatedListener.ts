@@ -11,11 +11,10 @@ export class OrderCreatedListener extends Listener<OrderCreatedEvent> {
         const tick = await Ticket.findById(data.ticket.id);
 
         if(!tick) {throw new Error('Ticket can\'t be found!');}
-
+        console.log("Before updated ticks: ", tick);
         await tick.save();
         tick.set({orderId: data.id});
-        const ticks = await Ticket.find();
-        console.log("Updaetd ticks: ", ticks)
+        console.log("Updated ticks: ", tick);
         new TicketUpdatedPublisher(this.client).publish({
             id: tick.id,
             title: tick.title,
