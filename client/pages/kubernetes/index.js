@@ -6,20 +6,24 @@ const Kube = () => {
 
   const [selection, setSelection] = useState('');
 
+  changeSelection = (e) => {
+    console.log(e.target.value);
+  }
+
   return (
     <div>
       <ul class="nav nav-tabs">
         <li class="nav-item">
-          <a class="nav-link" value="aaa" onClick={(e) => setSelection(e.target.value)}>Aaaa</a>
+          <a class="nav-link" value="aaa" onClick={(e) => {changeSelection(e)}}>Aaaa</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" value="aaa" onClick={(e) => setSelection(e.target.value)}>bbbbb</a>
+          <a class="nav-link" value="aaa" onClick={(e) => {changeSelection(e)}}>bbbbb</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" value="sdff" onClick={(e) => setSelection(e.target.value)}>ccccc</a>
+          <a class="nav-link" value="sdff" onClick={(e) => {changeSelection(e)}}>ccccc</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" value="dfs" onClick={(e) => setSelection(e.target.value)}>ddddd</a>
+          <a class="nav-link" value="dfs" onClick={(e) => {changeSelection(e)}}>ddddd</a>
         </li>
       </ul>
       <hr />
