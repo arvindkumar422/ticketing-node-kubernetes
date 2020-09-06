@@ -8,6 +8,7 @@ router.get('/api/tickets',
         const tick = await Ticket.find({
             orderId: undefined
         });
+        console.log("Tick:", tick);
         res.send(tick);
     });
 
