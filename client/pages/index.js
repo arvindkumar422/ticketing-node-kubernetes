@@ -1,5 +1,5 @@
 import Link from "next/link";
-import KubeConfig from "@kubernetes/client-node";
+import {KubeConfig} from "@kubernetes/client-node";
 import CoreV1Api from "@kubernetes/client-node";
 
 
