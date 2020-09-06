@@ -19,14 +19,11 @@ const Kube = () => {
           </tr>
         </thead>
         <tbody>
-          
-          {console.log(depls)}
-          {depls.depls.forEach((element) => {
-            console.log(element);
+          {depls.depls.map((item) => {
             return (
-              <tr key={element.name}>
-                <td>{element.name}</td>
-                <td>{element.date}</td>
+              <tr key={item.name}>
+                <td>{item.name}</td>
+                <td>{item.date}</td>
               </tr>
             );
           })}
