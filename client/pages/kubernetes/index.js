@@ -46,7 +46,7 @@ const Kube = () => {
               Created
             </th>
             <th>
-              Images
+              Images 
             </th>
           </tr>
         </thead>
