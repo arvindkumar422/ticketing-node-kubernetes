@@ -43,7 +43,7 @@
 }
 
 .card {
-    margin-top: 10%;
+    margin-top: 3%;
     max-width: 40%;
 }
 
@@ -60,9 +60,6 @@
     justify-content: center;
 }
 
-.nav-selection {
-    text-align: center;
-}
 
 .expiry {
     margin-top: 4%;

@@ -2,6 +2,7 @@ import Link from 'next/link';
 
 export default ({ currentUser }) => {
   const links = [
+    { label: 'Kubernetes dashboard', href: '/kubernetes' },
     !currentUser && { label: 'Register', href: '/auth/signup' },
     !currentUser && { label: 'Login', href: '/auth/signin' },
     currentUser && { label: 'Sell tickets', href: '/tickets/new' },
