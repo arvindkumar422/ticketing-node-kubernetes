@@ -14,16 +14,16 @@ export default ({ currentUser }) => {
       return (
         <li key={href} className="nav-item">
           <Link href={href}>
-            <a className="nav-link" style={{ marginRight: "6px", backgroundColor: "aliceblue" }}>{label}</a>
+            <a className="nav-link nav-main" style={{ marginRight: "6px", backgroundColor: "aliceblue" }}>{label}</a>
           </Link>
         </li>
       );
     });
 
   return (
-    <div className="container-fluid">
+    <div>
       <nav className="navbar navbar-dark bg-dark">
-        <div className="container">
+        <div className="container-fluid">
           <Link href="/">
             <a className="navbar-brand">MicroTix</a>
           </Link>
