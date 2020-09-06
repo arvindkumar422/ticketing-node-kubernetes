@@ -13,18 +13,29 @@ const TicketShow = ({ currentUser, ticket }) => {
   });
 
   return (
-    <div class="card ticket-card">
-      <div class="card-body">
-        <h2 class="card-title">{ticket.title}</h2><h4 class="card-text" >${ticket.price}</h4>
-        <hr/>
-        {errors}
-        {currentUser === null 
-        ? <div><button class="btn btn-primary" disabled>Purchase</button><p>You must be logged in to purchase</p></div> 
-        : <button onClick={() => doRequest()} class="btn btn-primary">Purchase</button>}
-        {/* <button disabled={currentUser === null} onClick={() => doRequest()} class="btn btn-primary">Purchase</button> */}
+    <div>
+      <div>
+        <p>
+          Clicking on 'Purchase' will create a new order which will expire in 90 seconds.
+        </p>
+        <p>
+          Ticket will be locked and cannot be edited or purchased by others until the order expires.
+        </p>
       </div>
+      <div class="card ticket-card">
+        <div class="card-body">
+          <h2 class="card-title">{ticket.title}</h2><h4 class="card-text" >${ticket.price}</h4>
+          <hr />
+          {errors}
+          {currentUser === null
+            ? <div><button class="btn btn-primary" disabled>Purchase</button><p>You must be logged in to purchase</p></div>
+            : <button onClick={() => doRequest()} class="btn btn-primary">Purchase</button>}
+          {/* <button disabled={currentUser === null} onClick={() => doRequest()} class="btn btn-primary">Purchase</button> */}
+        </div>
 
+      </div>
     </div>
+
     // <div>
     //   <h1>{ticket.title}</h1>
     //   <h4>${ticket.price}</h4>

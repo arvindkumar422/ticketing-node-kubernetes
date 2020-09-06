@@ -1,7 +1,4 @@
 {
-  "browser": {
-    "child_process": false
-  },
   "name": "client",
   "version": "1.0.0",
   "description": "",
