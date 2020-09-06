@@ -6,7 +6,7 @@ const Kube = () => {
 
   const [selection, setSelection] = useState('');
 
-  changeSelection = (e) => {
+  const changeSelection = (e) => {
     console.log(e.target.value);
   }
 
