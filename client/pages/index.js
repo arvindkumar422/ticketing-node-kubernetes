@@ -6,6 +6,7 @@ const LandingPage = ({ currentUser, tickets }) => {
 
   const podsList = new KubeConfig();
 
+
   const ticketList = tickets.map((ticket) => {
     return (
       <Link href="tickets/[ticketId]" as={`/tickets/${ticket.id}`}>
