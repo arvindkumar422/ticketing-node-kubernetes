@@ -47,6 +47,14 @@
     max-width: 40%;
 }
 
+.nav-item {
+    cursor: pointer;
+}
+
+.nav-selection {
+    text-align: center;
+}
+
 .expiry {
     margin-top: 4%;
     background: antiquewhite;
