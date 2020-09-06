@@ -39,7 +39,7 @@
 }
 
 .ticket-card {
-    background: #b5f6db;
+    background: #b2e5f5ba;
 }
 
 .card {
@@ -72,9 +72,17 @@
 }
 
 .userloggedin {
-    color: #2e4aeb;
+    color: #000000;
+    text-shadow: black;
+    background: #cdffff40;
 }
 
 .userloggedindiv {
     text-align: center;
+}
+
+.info {
+    background: #f0ebc4;
+    max-width: 60%;
+    margin-top: 3%;
 }

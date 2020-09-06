@@ -14,11 +14,10 @@ const TicketShow = ({ currentUser, ticket }) => {
 
   return (
     <div>
-      <div>
+      <div className="info">
         <p>
           Clicking on 'Purchase' will create a new order which will expire in 90 seconds.
-        </p>
-        <p>
+          <br/>
           Ticket will be locked and cannot be edited or purchased by others until the order expires.
         </p>
       </div>
