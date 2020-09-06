@@ -51,6 +51,15 @@
     cursor: pointer;
 }
 
+.nav-link {
+    color: #451919;
+}
+
+.nav-tabs {
+    background: #78ddd6c7;
+    justify-content: center;
+}
+
 .nav-selection {
     text-align: center;
 }

@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 
 const Kube = () => {
 
-  const [selection, setSelection] = useState('');
+  const [selection, setSelection] = useState('dep');
 
 
   return (
