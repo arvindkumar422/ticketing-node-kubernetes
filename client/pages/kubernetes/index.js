@@ -11,7 +11,7 @@ const Kube = () => {
     <div>
       <ul class="nav nav-tabs">
         <li class="nav-item">
-          <a class="nav-link" value="aaa" onChange={(e) => setSelection(e.target.value)}>Aaaaaa</a>
+          <a class="nav-link" value="aaa" onChange={(e) => setSelection(e.target.value)}>Aaaa</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" value="aaa" onChange={(e) => setSelection(e.target.value)}>bbbbb</a>
