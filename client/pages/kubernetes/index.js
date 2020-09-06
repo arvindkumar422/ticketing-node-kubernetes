@@ -22,8 +22,9 @@ const Kube = () => {
           
           {console.log(depls)}
           {depls.depls.forEach((element) => {
+            console.log(element);
             return (
-              <tr key={element.id}>
+              <tr key={element.name}>
                 <td>{element.name}</td>
                 <td>{element.date}</td>
               </tr>
