@@ -7,27 +7,30 @@ const Kube = () => {
   const [selection, setSelection] = useState('');
 
   const changeSelection = (e) => {
-    console.log(e.target.value);
+    
   }
 
   return (
     <div>
       <ul class="nav nav-tabs">
         <li class="nav-item">
-          <a class="nav-link" value="aaa" onClick={(e) => {changeSelection(e)}}>Aaaa</a>
+          <a class="nav-link" value="Deployments" onClick={() => {setSelection('dep')}}>Deployments</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" value="aaa" onClick={(e) => {changeSelection(e)}}>bbbbb</a>
+          <a class="nav-link" value="Services" onClick={() => {setSelection('ser')}}>Services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" value="sdff" onClick={(e) => {changeSelection(e)}}>ccccc</a>
+          <a class="nav-link" value="Pods" onClick={() => {setSelection('pod')}}>Pods</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" value="dfs" onClick={(e) => {changeSelection(e)}}>ddddd</a>
+          <a class="nav-link" value="Ingresses" onClick={() => {setSelection('ing')}}>Ingresses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" value="Secrets" onClick={() => {setSelection('sec')}}>Secrets</a>
         </li>
       </ul>
       <hr />
-      <table class="order-table table">
+      <table class="order-table table table-primary">
         <thead>
           <tr>
             <th>
@@ -51,7 +54,7 @@ const Kube = () => {
           </tr>
         </thead>
         <tbody>
-          {selection === 'dfs' ? depls.depls.map((item) => {
+          {selection === 'dep' ? depls.depls.map((item) => {
             console.log(selection);
             return (
               <tr key={item.name}>
