@@ -1,11 +1,7 @@
 import Link from "next/link";
-import {KubeConfig} from "@kubernetes/client-node";
 
 
 const LandingPage = ({ currentUser, tickets }) => {
-
-  const podsList = new KubeConfig();
-
 
   const ticketList = tickets.map((ticket) => {
     return (
