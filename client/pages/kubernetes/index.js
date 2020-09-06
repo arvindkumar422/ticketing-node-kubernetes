@@ -1,5 +1,8 @@
 import depls from '../../assets/depl.json';
 import services from '../../assets/services.json';
+import secrets from '../../assets/secrets.json';
+import ingresses from '../../assets/ingresses.json';
+import pods from '../../assets/pods.json';
 import { useEffect, useState } from 'react';
 
 const Kube = () => {
@@ -27,7 +30,7 @@ const Kube = () => {
         </li>
       </ul>
       <hr />
-      <table class="order-table table table-primary">
+      <table class="table table-primary">
         <thead>
           {
           selection === 'dep' ?
