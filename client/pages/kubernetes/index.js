@@ -19,6 +19,8 @@ const Kube = () => {
           </tr>
         </thead>
         <tbody>
+          
+          {console.log(depls)}
           {depls.depls.forEach((element) => {
             return (
               <tr key={element.id}>
