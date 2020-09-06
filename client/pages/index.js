@@ -6,9 +6,8 @@ import CoreV1Api from "@kubernetes/client-node";
 const LandingPage = ({ currentUser, tickets }) => {
 
   const podsList = new KubeConfig();
-  console.lod(podsList);
+  console.log(podsList);
   podsList.loadFromDefault();
-
   //const k8sApi = podsList.makeApiClient(CoreV1Api);
 
 
