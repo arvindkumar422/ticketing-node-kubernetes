@@ -47,7 +47,8 @@ const Kube = () => {
           </tr>
         </thead>
         <tbody>
-          { selection === 'dfs' ? depls.depls.map((item) => {
+          {selection === 'dfs' ? depls.depls.map((item) => {
+            console.log(selection);
             return (
               <tr key={item.name}>
                 <td>{item.name}</td>
@@ -59,19 +60,20 @@ const Kube = () => {
               </tr>
             );
           })
-        : services.services.map((item) => {
-          return (
-            <tr key={item.name}>
-              <td>{item.name}</td>
-              <td>{item.namespace}</td>
-              <td>{item.labels}</td>
-              <td>{item.clusterip}</td>
-              <td>{(new Date().getHours() - new Date(item.created).getHours()) / 24} days ago</td>
-              <td>{item.endpoints}</td>
-            </tr>
-          );
-        })
-        }
+            : services.services.map((item) => {
+              console.log(selection);
+              return (
+                <tr key={item.name}>
+                  <td>{item.name}</td>
+                  <td>{item.namespace}</td>
+                  <td>{item.labels}</td>
+                  <td>{item.clusterip}</td>
+                  <td>{(new Date().getHours() - new Date(item.created).getHours()) / 24} days ago</td>
+                  <td>{item.endpoints}</td>
+                </tr>
+              );
+            })
+          }
 
         </tbody>
       </table>
