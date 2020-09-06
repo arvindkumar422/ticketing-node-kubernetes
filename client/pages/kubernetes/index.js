@@ -10,16 +10,16 @@ const Kube = () => {
     <div>
       <ul class="nav nav-tabs">
         <li class="nav-item">
-          <a class="nav-link" value="aaa" onChange={(e) => setSelection(e.target.value)}>Aaaa</a>
+          <a class="nav-link" value="aaa" onClick={(e) => setSelection(e.target.value)}>Aaaa</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" value="aaa" onChange={(e) => setSelection(e.target.value)}>bbbbb</a>
+          <a class="nav-link" value="aaa" onClick={(e) => setSelection(e.target.value)}>bbbbb</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" value="sdff" onChange={(e) => setSelection(e.target.value)}>ccccc</a>
+          <a class="nav-link" value="sdff" onClick={(e) => setSelection(e.target.value)}>ccccc</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" value="dfs" href="#" onChange={(e) => setSelection(e.target.value)}>ddddd</a>
+          <a class="nav-link" value="dfs" onClick={(e) => setSelection(e.target.value)}>ddddd</a>
         </li>
       </ul>
       <hr />
@@ -54,7 +54,7 @@ const Kube = () => {
                 <td>{item.namespace}</td>
                 <td>{item.labels}</td>
                 <td>{item.pods}</td>
-                <td>{(new Date().getHours() - new Date(item.created).getHours()) / 24} days ago</td>
+                <td>{(new Date().getTime() - new Date(item.created).getTime()) / (1000 * 3600 * 24)} days ago</td>
                 <td>{item.images}</td>
               </tr>
             );
