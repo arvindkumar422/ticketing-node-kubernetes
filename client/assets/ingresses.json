@@ -1,0 +1,11 @@
+{
+    "ingresses": [
+        {
+            "name": "ingress-service",
+            "namespace": "default",
+            "labels": "-",
+            "created": "2020-08-02T09:28:56.321-10:00",
+            "endpoints": "www.arvindtix.xyz"
+        }
+    ]
+}
