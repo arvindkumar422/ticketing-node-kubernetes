@@ -1,0 +1,84 @@
+{
+    "services": [
+        {
+            "name": "tickets-mongo-srv",
+            "namespace": "default",
+            "labels": "-",
+            "clusterip": "10.245.252.88",
+            "created": "2020-08-02T09:28:56.321-10:00",
+            "endpoints": "tickets-mongo-srv:27017 TCP,tickets-mongo-srv:0 TCP"
+        },
+        {
+            "name": "payments-mongo-srv",
+            "namespace": "default",
+            "labels": "-",
+            "clusterip": "10.245.227.7",
+            "created": "2020-08-02T09:28:56.321-10:00",
+            "images": "payments-mongo-srv:27017 TCP,payments-mongo-srv:0 TCP"
+        },
+        {
+            "name": "tickets-srv",
+            "namespace": "default",
+            "labels": "-",
+            "clusterip": "10.245.206.80",
+            "created": "2020-08-02T09:28:56.321-10:00",
+            "images": "tickets-srv:3000 TCP,tickets-srv:0 TCP"
+        },
+        {
+            "name": "orders-srv",
+            "namespace": "default",
+            "labels": "-",
+            "clusterip": "110.245.195.15",
+            "created": "2020-08-02T09:28:56.321-10:00",
+            "images": "orders-srv:3000 TCP,orders-srv:0 TCP"
+        },
+        {
+            "name": "payments-srv",
+            "namespace": "default",
+            "labels": "-",
+            "clusterip": "10.245.196.242",
+            "created": "2020-08-02T09:28:56.321-10:00",
+            "images": "payments-srv:3000 TCP,payments-srv:0 TCP"
+        },
+        {
+            "name": "orders-mongo-srv",
+            "namespace": "default",
+            "labels": "-",
+            "clusterip": "10.245.196.242",
+            "created": "2020-08-02T09:28:56.321-10:00",
+            "images": "orders-mongo-srv:27017 TCP,orders-mongo-srv:0 TCP"
+        },
+        {
+            "name": "nats-srv",
+            "namespace": "default",
+            "labels": "-",
+            "clusterip": "10.245.237.46",
+            "created": "2020-08-02T09:28:56.321-10:00",
+            "images": "nats-srv:4222 TCP,nats-srv:0 TCP,nats-srv:8222 TCP,nats-srv:0 TCP"
+        },
+        {
+            "name": "auth-mongo-srv",
+            "namespace": "default",
+            "labels": "-",
+            "clusterip": "10.245.224.18",
+            "created": "2020-08-02T09:28:56.321-10:00",
+            "images": "auth-mongo-srv:27017 TCP,auth-mongo-srv:0 TCP"
+        },
+        {
+            "name": "client-srv",
+            "namespace": "default",
+            "labels": "-",
+            "clusterip": "10.245.106.100",
+            "created": "2020-08-02T09:28:56.321-10:00",
+            "images": "client-srv:3000 TCP,client-srv:0 TCP"
+        },
+        {
+            "name": "expiration-redis-srv",
+            "namespace": "default",
+            "labels": "-",
+            "clusterip": "10.245.245.9",
+            "created": "2020-08-02T09:28:56.321-10:00",
+            "images": "expiration-redis-srv:6379 TCP,expiration-redis-srv:0 TCP"
+        }
+    ]
+}

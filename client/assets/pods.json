@@ -1,0 +1,94 @@
+{
+    "pods": [
+        {
+            "name": "client-depl-599bf6b8b4-zfbxp",
+            "namespace": "default",
+            "labels": "app: client",
+            "node": "pool-bz7fzfx5t-3g4xi",
+            "created": "2020-09-02T09:28:56.321-10:00",
+            "status": "Running",
+            "restarts": "0"
+        },
+        {
+            "name": "orders-depl-68786fb9d7-l7jr7",
+            "namespace": "default",
+            "labels": "app: orders",
+            "node": "pool-bz7fzfx5t-3g4xv",
+            "created": "2020-08-02T09:28:56.321-10:00",
+            "status": "Running",
+            "restarts": "0"
+        },
+        {
+            "name": "auth-depl-6bb87858d5-4lzkn",
+            "namespace": "default",
+            "labels": "-",
+            "node": "pool-bz7fzfx5t-3g4xv",
+            "created": "2020-08-02T09:28:56.321-10:00",
+            "status": "Running",
+            "restarts": "0"
+        },
+        {
+            "name": "expiration-depl-788d7d74f4-ckfj5",
+            "namespace": "default",
+            "labels": "-",
+            "node": "pool-bz7fzfx5t-3g4xv",
+            "created": "2020-08-02T09:28:56.321-10:00",
+            "status": "Running",
+            "restarts": "0"
+        },
+        {
+            "name": "tickets-depl-6f94c587bf-6xj7f",
+            "namespace": "default",
+            "labels": "-",
+            "node": "pool-bz7fzfx5t-3g4x4",
+            "created": "2020-08-02T09:28:56.321-10:00",
+            "status": "Running",
+            "restarts": "0"
+        },
+        {
+            "name": "payments-depl-7bfd866f58-9q7ws",
+            "namespace": "default",
+            "labels": "-",
+            "node": "pool-bz7fzfx5t-3g4xi",
+            "created": "2020-08-02T09:28:56.321-10:00",
+            "status": "Running",
+            "restarts": "0"
+        },
+        {
+            "name": "payments-mongo-depl-676fdcb847-74tqs",
+            "namespace": "default",
+            "labels": "-",
+            "node": "pool-bz7fzfx5t-3g4xv",
+            "created": "2020-08-02T09:28:56.321-10:00",
+            "status": "Running",
+            "restarts": "0"
+        },
+        {
+            "name": "tickets-mongo-depl-6f4b4486b7-zt6d2",
+            "namespace": "default",
+            "labels": "-",
+            "node": "pool-bz7fzfx5t-3g4xv",
+            "created": "2020-08-02T09:28:56.321-10:00",
+            "status": "Running",
+            "restarts": "0"
+        },
+        {
+            "name": "orders-mongo-depl-6556cbc555-qhf5x",
+            "namespace": "default",
+            "labels": "-",
+            "node": "pool-bz7fzfx5t-3g4xi",
+            "created": "2020-08-02T09:28:56.321-10:00",
+            "status": "Running",
+            "restarts": "0"
+        },
+        {
+            "name": "nats-depl-64db797fdc-z58m5",
+            "namespace": "default",
+            "labels": "-",
+            "node": "pool-bz7fzfx5t-3g4x4",
+            "created": "2020-08-02T09:28:56.321-10:00",
+            "status": "Running",
+            "restarts": "0"
+        }
+    ]
+}
