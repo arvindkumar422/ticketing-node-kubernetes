@@ -13,8 +13,9 @@ export class OrderCreatedListener extends Listener<OrderCreatedEvent> {
         if(!tick) {throw new Error('Ticket can\'t be found!');}
 
         await tick.save();
-        console.log("data", data);
         tick.set({orderId: data.id});
+        const ticks = await Ticket.find();
+        console.log("Updaetd ticks: ", ticks)
         new TicketUpdatedPublisher(this.client).publish({
             id: tick.id,
             title: tick.title,
